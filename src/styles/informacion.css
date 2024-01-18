@@ -1,0 +1,29 @@
+/* styles/informacion.css */
+
+.informacion {
+    width: 100%;
+    margin: 1px auto;
+    padding: 0px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color:#f8f8f8;
+  }
+  
+  .informacion h2 {
+    color: #fafafa;
+    text-shadow: 1px, white;
+    font-size:20px;
+  }
+  
+  .informacion p {
+    margin-bottom: 10px;
+  }
+  .bodiv{
+    width: auto;
+    height: 400px;
+    background: #50b9ff;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+  

@@ -1,0 +1,55 @@
+/* styles/simulador.css */
+
+.simulador {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .conten {
+    background-color: #fafbfc;
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  }
+  
+  .electrodomesticos {
+    margin-top: 10px;
+  }
+  
+  .electrodomesticos label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .resultado {
+    margin-top: 20px;
+  }
+  
+  /* Añade estilos adicionales según sea necesario */
+  .botones {
+    margin-top: 20px;
+  }
+  
+  .botones button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .botones button:hover {
+    background-color: #0056b3;
+  }
+  .tituloAnimado {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }

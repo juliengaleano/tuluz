@@ -1,0 +1,39 @@
+/* styles/carrusel.css */
+
+.carrusel {
+    max-width: 50%;
+    
+    padding: 10px 0;
+  }
+  
+  .slick-dots {
+    bottom: 1px;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 14px;
+  }
+  
+/* styles/carrusel.css */
+
+.carrusel {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+  }
+  
+  .slide {
+    width: 100%;
+    transition: transform 0.3s ease-in-out; /* Agrega una transición suave al movimiento */
+    
+  }
+  
+  /* Asegura que las imágenes ocupen el 100% del ancho y el 50% de la altura del contenedor */
+  .imagen {
+    width: auto;
+    height: auto; /* El 50% de la altura de la ventana (viewport height) */
+   /* object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin distorsionarla */
+    /*object-position: center; /* Centra la imagen verticalmente en el contenedor */
+  }
+  

@@ -1,0 +1,20 @@
+/* styles/portada.css */
+
+.portada {
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+    opacity: 0; /* Inicialmente, la portada es invisible */
+  }
+  
+  /* Agrega una clase de animación cuando se hace scroll */
+  .portada.animated {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+  }
+  .carrusel {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,42 @@
+/* styles/procesosVenta.module.css */
+
+.contenedortotal{
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.contenedorProcesos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+   
+  }
+  
+  .proceso {
+    background: linear-gradient(rgb(6, 177, 207)10%, rgba(60, 185, 243, 0.973)90%); /* Color de fondo verde para indicar energías renovables */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fcfbfa; /* Color del texto, ajusta según tu diseño */
+  }
+  
+  .imagenProceso {
+    width: 50%;
+    height: auto;
+  }
+  .carrusel {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+  }
+  .textstyle{
+    color:black;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+  }

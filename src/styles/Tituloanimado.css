@@ -1,0 +1,16 @@
+/* styles/tituloAnimado.css */
+
+.tituloAnimado {
+    font-size: 37px;
+    color: #007bff; /* Color azul, ajusta según tu paleta de colores */
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'TuTipoDeFuente', sans-serif; /* Reemplaza 'TuTipoDeFuente' con el nombre de tu fuente */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .tituloAnimado:hover {
+    transform: rotate(360deg);
+    
+  }
+  
