@@ -1,9 +1,10 @@
 // formulario.js
 
 import React, { useState } from 'react';
-import { database } from '../firebase'; // Importa la configuración de Firebase
+import { database } from '../lib/firebase'; // Importa la configuración de Firebase
 import { ref, push } from 'firebase/database';
 import {getFirestore, collection, } from 'firebase/firestore';
+import styled from 'styled-components';
 
 function Formulario() {
   const [nombre, setNombre] = useState('');
@@ -29,12 +30,60 @@ function Formulario() {
     setMensaje('');
     alert('mensaje  guardado');
   };
+  // Estilos para el formulario
+const FormContainer = styled.div`
+max-width: 400px;
+margin: 0 auto;
+`;
+
+const Form = styled.form`
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+
+display: flex;
+flex-direction: column;
+`;
+const FormGroup = styled.div`
+  margin-bottom: 20px;
+`;
+
+const Label = styled.label`
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+`;
+
+const Input = styled.input`
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+const Button = styled.button`
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #45a049;
+  }
+`;
+const StyledForm  = () => {
+
 
   return (
-    <div>
+    
+      <FormContainer>
       <h1>Formulario de Contacto</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <FormGroup>
           <label htmlFor="nombre">Nombre:</label>
           <input
             type="text"
@@ -43,9 +92,9 @@ function Formulario() {
             onChange={(e) => setNombre(e.target.value)}
             required
           />
-        </div>
-        <div>
-          <label htmlFor="correo">Correo Electrónico:</label>
+        </FormGroup>
+        <FormGroup>
+        <label htmlFor="correo">Correo Electrónico:</label>
           <input
             type="email"
             id="correo"
@@ -53,7 +102,9 @@ function Formulario() {
             onChange={(e) => setCorreo(e.target.value)}
             required
           />
-        </div>
+        </FormGroup>
+          
+        
         <div>
           <label htmlFor="mensaje">Mensaje:</label>
           <textarea
@@ -65,8 +116,11 @@ function Formulario() {
         </div>
         <button type="submit">Enviar</button>
       </form>
-    </div>
+      </FormContainer>
+    
   );
 }
+};
+  
 
-export default Formulario;
+export default StyledForm ;

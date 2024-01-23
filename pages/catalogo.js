@@ -3,6 +3,8 @@
 import React from 'react';
 import Nav from '../components/nav';
 import Simulador from '../components/Simulador';
+import CrudComponent from '../components/crudcomponente';
+import Formulario from '../components/formulario';
 
 import styles from '../src/styles/simulador.css';
 import TituloAnimado from '../components/Tituloanimado';
@@ -26,7 +28,9 @@ function Catalogo() {
       <div className={styles.conten}>
       <Simulador></Simulador>
       <ListaProductos></ListaProductos>
+      
       </div>
+      <Formulario></Formulario>
     </div>
     
   );
