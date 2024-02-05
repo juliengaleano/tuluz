@@ -2,9 +2,12 @@
 
 import React from 'react';
 import styles from '../src/styles/informacion.css';
+import Formulario  from '../components/formulario';
+
 
 const Informacion = () => {
   return (
+    <div className='cuadro'>
     <div className='informacion'>
       <div className='bodiv'>
         <h2>Contacto</h2>
@@ -17,8 +20,13 @@ const Informacion = () => {
         Nuestra MISION es proporcionar soluciones
         de energía solar para un futuro más limpio, verde y autosostenible.
       </p>
+      <div>
+      <Formulario ></Formulario >
+      </div>
       
       </div>
+      
+    </div>
     </div>
   );
 };

@@ -4,11 +4,14 @@ import React, { useState } from 'react';
 import { database } from '../lib/firebase'; // Importa la configuración de Firebase
 import { ref, push } from 'firebase/database';
 import {getFirestore, collection, } from 'firebase/firestore';
-import styled from 'styled-components';
+import styles from '../src/styles/estiloforms.css';
+
 
 function Formulario() {
   const [nombre, setNombre] = useState('');
   const [correo, setCorreo] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [direccion, setDireccion] = useState('');
   const [mensaje, setMensaje] = useState('');
 
   const handleSubmit = (e) => {
@@ -18,6 +21,8 @@ function Formulario() {
     const nuevoDato = {
       nombre,
       correo,
+      telefono,
+      direccion,
       mensaje,
     };
 
@@ -27,64 +32,19 @@ function Formulario() {
     // Limpiar los campos del formulario
     setNombre('');
     setCorreo('');
+    setTelefono('');
+    setDireccion('');
     setMensaje('');
-    alert('mensaje  guardado');
+    alert('MUY BIEN, TU MENSAJE HA SIDO ENVIADO, NOS PONDREMOS EN CONTACTO PRONTO  MUCHAS GRACIAS, y que buena energia   ');
   };
-  // Estilos para el formulario
-const FormContainer = styled.div`
-max-width: 400px;
-margin: 0 auto;
-`;
-
-const Form = styled.form`
-background-color: #fff;
-border-radius: 8px;
-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-padding: 20px;
-
-display: flex;
-flex-direction: column;
-`;
-const FormGroup = styled.div`
-  margin-bottom: 20px;
-`;
-
-const Label = styled.label`
-  font-size: 14px;
-  margin-bottom: 8px;
-  display: block;
-`;
-
-const Input = styled.input`
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-`;
-
-const Button = styled.button`
-  background-color: #4caf50;
-  color: #fff;
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #45a049;
-  }
-`;
-const StyledForm  = () => {
-
-
+ 
   return (
     
-      <FormContainer>
-      <h1>Formulario de Contacto</h1>
+      <div className='formcontainer'>
       <form onSubmit={handleSubmit}>
-        <FormGroup>
-          <label htmlFor="nombre">Nombre:</label>
+      <h1 className='tituloform'>Cuentanos que dudas tienes, en breve nos contactaremos contigo</h1>
+        <div className='formgroup'>
+          <label htmlFor="nombre">Cual es tu Nombre:</label>
           <input
             type="text"
             id="nombre"
@@ -92,9 +52,10 @@ const StyledForm  = () => {
             onChange={(e) => setNombre(e.target.value)}
             required
           />
-        </FormGroup>
-        <FormGroup>
-        <label htmlFor="correo">Correo Electrónico:</label>
+        </div>
+
+        <div className='formgroup'>
+        <label htmlFor="correo"> dejanos tu Correo Electrónico:</label>
           <input
             type="email"
             id="correo"
@@ -102,12 +63,31 @@ const StyledForm  = () => {
             onChange={(e) => setCorreo(e.target.value)}
             required
           />
-        </FormGroup>
-          
+        </div>
+        <div className='formgroup'>
+          <label htmlFor="Telefono">dejanos tu telefono :</label>
+          <input
+            type="text"
+            id="telefono"
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
+            required
+          />
+        </div>
+        <div className='formgroup'>
+          <label htmlFor="direccion">desde que lugar nos escribes </label>
+          <input
+            type="text"
+            id="direccion"
+            value={direccion}
+            onChange={(e) => setDireccion(e.target.value)}
+            required
+          />
+        </div>
         
-        <div>
-          <label htmlFor="mensaje">Mensaje:</label>
-          <textarea
+        <div className='formgroup'>
+          <label htmlFor="mensaje">y cuentanos en que te podemos ayudar :</label>
+          <textarea className='copiinput'
             id="mensaje"
             value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
@@ -116,11 +96,10 @@ const StyledForm  = () => {
         </div>
         <button type="submit">Enviar</button>
       </form>
-      </FormContainer>
+      </div>
     
   );
-}
 };
   
 
-export default StyledForm ;
+export default Formulario ;

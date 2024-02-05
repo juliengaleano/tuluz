@@ -1,0 +1,48 @@
+.formcontainer {max-width: 900px;
+  margin: 0 auto;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  
+    display: flex;
+    flex-direction: column;
+  
+}
+.formgroup {
+    margin-bottom: 20px;
+}
+label {
+    font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  color:black;
+}
+input  {
+    padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.copiinput{
+    padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+    padding: 10px;
+  font-size: 16px;
+  border: 1px solid #faf602;
+  border-radius: 4px;
+  background-color: cornflowerblue;
+  color:white;
+}
+.tituloform {
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-optical-sizing: auto;
+}
